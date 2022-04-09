@@ -20,7 +20,7 @@ function Item(props) {
 }
 
 const App = () => <p>
-  <Title label='React'>React 정말 정말 잘 만들기</Title>
+  <Title label='React'>React 정말 잘 만들기</Title>
   <ul>
     <Item color="red">first item</Item>
     <Item color="blue">second item</Item>
