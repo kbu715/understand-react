@@ -1,17 +1,25 @@
 // @babel/preset-react에 의해
 // Default 값은 React.createElement
 // NOTE: React.createElement -> createElement 로 바꿔주는 주석
-/* @JSX createElement */
+/* @jsx createElement */
 
-import { createDOM, createElement, render } from './react';
+import { createElement, render } from './react';
+
+function Title(props) {
+  return <h1>{props.children}</h1>;
+}
+
+function Item(props) {
+  return <li style={`color: ${props.color}`}>{props.children}</li>;
+}
 
 const vdom2 = <p>
-<h1>React 만들기</h1>
-<ul>
-  <li style="color: red">first item</li>
-  <li style="color: blue">second item</li>
-  <li style="color: green">third item</li>
-</ul>
+  <Title label='React'>React 정말 정말 정말 잘 만들기</Title>
+  <ul>
+    <Item color="red">first item</Item>
+    <Item color="blue">second item</Item>
+    <Item color="green">third item</Item>
+  </ul>
 </p>
 
 render(vdom2, document.querySelector('#root'));
