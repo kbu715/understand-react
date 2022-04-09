@@ -52,3 +52,20 @@ export function createElement(tag, props, ...children) {
 export function render(vdom, container) {
   container.appendChild(createDOM(vdom));  
 }
+
+/*
+export const render = (function() {
+  let prevDom = null;
+
+  return function(vdom, container) {
+    if (prevDom === null) {
+      prevDom = vdom;
+    }
+
+    // diff
+    // 바뀐 부분만 update하는 로직
+
+    container.appendChild(createDOM(vdom));
+  }
+})();
+*/
