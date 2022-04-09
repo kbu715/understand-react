@@ -16,7 +16,10 @@ export function createDOM(node) {
   return element;
 }
 
+// props가 null일 때 에러!
+// props = {} //NOTE: default parameter는 값이 undefined 일때만 작동!
 export function createElement(tag, props, ...children) {
+  props = props || {};
   return { tag, props, children };
 }
 
