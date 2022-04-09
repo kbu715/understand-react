@@ -13,8 +13,8 @@ function Item(props) {
   return <li style={`color: ${props.color}`}>{props.children}</li>;
 }
 
-const vdom2 = <p>
-  <Title label='React'>React 정말 정말 정말 잘 만들기</Title>
+const App = () => <p>
+  <Title label='React'>React 정말 정말 잘 만들기</Title>
   <ul>
     <Item color="red">first item</Item>
     <Item color="blue">second item</Item>
@@ -22,4 +22,4 @@ const vdom2 = <p>
   </ul>
 </p>
 
-render(vdom2, document.querySelector('#root'));
+render(<App />, document.querySelector('#root'));
